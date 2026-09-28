@@ -1,0 +1,58 @@
+{
+  "format_type": "PNG",
+  "format_valid": false,
+  "score": 40.0,
+  "checks": [
+    {
+      "name": "png_signature",
+      "passed": true,
+      "description": "PNG 8-byte signature (\\x89PNG\\r\\n\\x1a\\n) verified",
+      "offset": 0,
+      "details": null
+    },
+    {
+      "name": "chunk_structure",
+      "passed": false,
+      "description": "PNG chunk sequence well-formed (IHDR header found, valid chunk sequence)",
+      "offset": -1,
+      "details": null
+    },
+    {
+      "name": "chunk_lengths",
+      "passed": false,
+      "description": "All chunk length fields stay within byte stream boundaries",
+      "offset": -1,
+      "details": null
+    },
+    {
+      "name": "crc_integrity",
+      "passed": true,
+      "description": "Chunk CRC-32 checksums verified against payload",
+      "offset": -1,
+      "details": null
+    },
+    {
+      "name": "iend_terminal",
+      "passed": false,
+      "description": "PNG IEND terminating chunk verified",
+      "offset": -1,
+      "details": null
+    }
+  ],
+  "issues": [
+    "Chunk 'IDAT' length 566 exceeds remaining bytes at offset 33",
+    "Missing terminal IEND chunk"
+  ],
+  "metadata": {
+    "chunks": [
+      {
+        "type": "IHDR",
+        "length": 13,
+        "offset": 8,
+        "crc_valid": true
+      }
+    ],
+    "pillow_error": "Truncated File Read"
+  },
+  "reason": "PNG validation: Signature=\u2713, IHDR=\u2713, IEND=\u2717, CRCs=\u2713 (1 chunks)"
+}

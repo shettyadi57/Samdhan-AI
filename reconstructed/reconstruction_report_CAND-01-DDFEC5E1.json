@@ -1,0 +1,223 @@
+{
+  "candidate_id": "CAND-01-DDFEC5E1",
+  "reconstructed_sha256": "ddfec5e11ddbdd6033d10495da31d983c338e6b2192b10337be7020bc7ad1332",
+  "source_evidence_sha256": "8c1ceef604e698074e5ba26fbcb4de08bc4ebd3b75d343401b34f4849f086a75",
+  "total_reconstructed_bytes": 353,
+  "byte_coverage": 0.7495,
+  "final_status": "complete",
+  "format_type": "PDF",
+  "format_validation": {
+    "format_type": "PDF",
+    "format_valid": true,
+    "score": 100.0,
+    "checks": [
+      {
+        "name": "pdf_header",
+        "passed": true,
+        "description": "PDF header marker (%PDF-1.7) located in head",
+        "offset": 0,
+        "details": null
+      },
+      {
+        "name": "pdf_objects",
+        "passed": true,
+        "description": "PDF objects structure (2 obj, 3 endobj)",
+        "offset": -1,
+        "details": {
+          "obj_count": 2,
+          "endobj_count": 3
+        }
+      },
+      {
+        "name": "xref_structure",
+        "passed": true,
+        "description": "Cross-reference table (xref) or XRef stream present",
+        "offset": -1,
+        "details": null
+      },
+      {
+        "name": "trailer_dictionary",
+        "passed": true,
+        "description": "PDF trailer dictionary or stream trailer present",
+        "offset": -1,
+        "details": null
+      },
+      {
+        "name": "eof_marker",
+        "passed": true,
+        "description": "PDF %%EOF termination marker verified in trailer",
+        "offset": -1,
+        "details": null
+      }
+    ],
+    "issues": [],
+    "metadata": {
+      "pdf_version": "1.7",
+      "object_count": 2,
+      "endobj_count": 3,
+      "xref_type": "table"
+    },
+    "reason": "PDF validation: %PDF=\u2713 (v1.7), Objects=\u2713 (2 found), Xref=\u2713, %%EOF=\u2713"
+  },
+  "fragments_used": [
+    {
+      "fragment_id": "FRAG-52C7BBE18189",
+      "length": 118
+    },
+    {
+      "fragment_id": "FRAG-D3D08BC39467",
+      "length": 118
+    },
+    {
+      "fragment_id": "FRAG-72D91327FC97",
+      "length": 117
+    }
+  ],
+  "fragments_missing": [],
+  "corrupted_fragments": [],
+  "fragment_ordering": [
+    "FRAG-52C7BBE18189",
+    "FRAG-D3D08BC39467",
+    "FRAG-72D91327FC97"
+  ],
+  "edge_scores": [
+    70.04,
+    52.26
+  ],
+  "edge_evidence": [
+    {
+      "from": "FRAG-D3D08BC39467",
+      "to": "FRAG-72D91327FC97",
+      "evidence": [
+        "Fragment B has no format header \u2014 consistent with interior/tail position",
+        "entropy delta boundary score: 74.6/100",
+        "no type detected on either fragment \u2014 structural test skipped",
+        "entropy tail=3.326, head=2.082, delta=1.244"
+      ]
+    },
+    {
+      "from": "FRAG-D3D08BC39467",
+      "to": "FRAG-52C7BBE18189",
+      "evidence": [
+        "Fragment B starts with a format header \u2014 may be independent file, not continuation",
+        "entropy delta boundary score: 93.8/100",
+        "PDF validation: %PDF=\u2713 (v1.7), Objects=\u2713 (2 found), Xref=\u2713, %%EOF=\u2717",
+        "entropy tail=3.326, head=4.565, delta=1.239",
+        "Physical offset contradiction: A at 236, B at 0 \u2014 B predates A in source"
+      ]
+    },
+    {
+      "from": "FRAG-52C7BBE18189",
+      "to": "FRAG-D3D08BC39467",
+      "evidence": [
+        "Fragment A is header_only \u2014 actively seeking continuation",
+        "Fragment B has no format header \u2014 consistent with interior/tail position",
+        "entropy delta boundary score: 93.8/100",
+        "partial assembly (2 internal markers found; full validation deferred)",
+        "entropy tail=4.468, head=4.595, delta=0.127"
+      ]
+    },
+    {
+      "from": "FRAG-52C7BBE18189",
+      "to": "FRAG-72D91327FC97",
+      "evidence": [
+        "Fragment A is header_only \u2014 actively seeking continuation",
+        "Fragment B has no format header \u2014 consistent with interior/tail position",
+        "entropy delta boundary score: 68.5/100",
+        "PDF validation: %PDF=\u2713 (v1.7), Objects=\u2713 (2 found), Xref=\u2717, %%EOF=\u2713",
+        "entropy tail=4.468, head=2.082, delta=2.386"
+      ]
+    },
+    {
+      "from": "FRAG-72D91327FC97",
+      "to": "FRAG-52C7BBE18189",
+      "evidence": [
+        "Fragment B starts with a format header \u2014 may be independent file, not continuation",
+        "entropy delta boundary score: 68.5/100",
+        "PDF validation: %PDF=\u2713 (v1.7), Objects=\u2713 (2 found), Xref=\u2717, %%EOF=\u2713",
+        "entropy tail=4.357, head=4.565, delta=0.208",
+        "Physical offset contradiction: A at 354, B at 0 \u2014 B predates A in source"
+      ]
+    },
+    {
+      "from": "FRAG-72D91327FC97",
+      "to": "FRAG-D3D08BC39467",
+      "evidence": [
+        "Fragment B has no format header \u2014 consistent with interior/tail position",
+        "entropy delta boundary score: 74.6/100",
+        "no type detected on either fragment \u2014 structural test skipped",
+        "entropy tail=4.357, head=4.595, delta=0.238",
+        "Physical offset contradiction: A at 354, B at 236 \u2014 B predates A in source"
+      ]
+    }
+  ],
+  "provenance": [
+    {
+      "output_range": [
+        0,
+        117
+      ],
+      "source_fragment": "FRAG-52C7BBE18189",
+      "source_offset": 0,
+      "edge_from": null,
+      "edge_score": 1.0,
+      "edge_evidence": [
+        "Initial segment (head of reconstruction chain)"
+      ],
+      "validation_result": {
+        "format_valid": true,
+        "format_type": "PDF",
+        "score": 100.0
+      }
+    },
+    {
+      "output_range": [
+        118,
+        235
+      ],
+      "source_fragment": "FRAG-D3D08BC39467",
+      "source_offset": 236,
+      "edge_from": "FRAG-52C7BBE18189",
+      "edge_score": 0.7004,
+      "edge_evidence": [
+        "Fragment A is header_only \u2014 actively seeking continuation",
+        "Fragment B has no format header \u2014 consistent with interior/tail position",
+        "entropy delta boundary score: 93.8/100",
+        "partial assembly (2 internal markers found; full validation deferred)",
+        "entropy tail=4.468, head=4.595, delta=0.127"
+      ],
+      "validation_result": {
+        "format_valid": true,
+        "format_type": "PDF",
+        "score": 100.0
+      }
+    },
+    {
+      "output_range": [
+        236,
+        352
+      ],
+      "source_fragment": "FRAG-72D91327FC97",
+      "source_offset": 354,
+      "edge_from": "FRAG-D3D08BC39467",
+      "edge_score": 0.5226,
+      "edge_evidence": [
+        "Fragment B has no format header \u2014 consistent with interior/tail position",
+        "entropy delta boundary score: 74.6/100",
+        "no type detected on either fragment \u2014 structural test skipped",
+        "entropy tail=3.326, head=2.082, delta=1.244"
+      ],
+      "validation_result": {
+        "format_valid": true,
+        "format_type": "PDF",
+        "score": 100.0
+      }
+    }
+  ],
+  "created_at": "2026-09-25T19:51:37.440087+00:00",
+  "forensic_notes": [
+    "Complete reconstruction: all 3 fragments present; format valid (PDF validation: %PDF=\u2713 (v1.7), Objects=\u2713 (2 found), Xref=\u2713, %%EOF=\u2713)",
+    "Structural check passed; all 3 fragments present; path score 61.2",
+    "Competing candidate path within 3.1 score points \u2014 ordering is ambiguous"
+  ]
+}

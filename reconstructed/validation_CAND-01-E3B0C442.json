@@ -1,0 +1,19 @@
+{
+  "format_type": "JPEG",
+  "format_valid": false,
+  "score": 0.0,
+  "checks": [
+    {
+      "name": "length_check",
+      "passed": false,
+      "description": "Stream too short",
+      "offset": 0,
+      "details": null
+    }
+  ],
+  "issues": [
+    "Stream too short for JPEG (< 4 bytes)"
+  ],
+  "metadata": {},
+  "reason": "Stream too short to be a valid JPEG"
+}

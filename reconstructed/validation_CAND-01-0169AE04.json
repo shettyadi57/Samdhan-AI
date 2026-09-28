@@ -1,0 +1,53 @@
+{
+  "format_type": "PDF",
+  "format_valid": true,
+  "score": 100.0,
+  "checks": [
+    {
+      "name": "pdf_header",
+      "passed": true,
+      "description": "PDF header marker (%PDF-1.7) located in head",
+      "offset": 0,
+      "details": null
+    },
+    {
+      "name": "pdf_objects",
+      "passed": true,
+      "description": "PDF objects structure (2 obj, 3 endobj)",
+      "offset": -1,
+      "details": {
+        "obj_count": 2,
+        "endobj_count": 3
+      }
+    },
+    {
+      "name": "xref_structure",
+      "passed": true,
+      "description": "Cross-reference table (xref) or XRef stream present",
+      "offset": -1,
+      "details": null
+    },
+    {
+      "name": "trailer_dictionary",
+      "passed": true,
+      "description": "PDF trailer dictionary or stream trailer present",
+      "offset": -1,
+      "details": null
+    },
+    {
+      "name": "eof_marker",
+      "passed": true,
+      "description": "PDF %%EOF termination marker verified in trailer",
+      "offset": -1,
+      "details": null
+    }
+  ],
+  "issues": [],
+  "metadata": {
+    "pdf_version": "1.7",
+    "object_count": 2,
+    "endobj_count": 3,
+    "xref_type": "table"
+  },
+  "reason": "PDF validation: %PDF=\u2713 (v1.7), Objects=\u2713 (2 found), Xref=\u2713, %%EOF=\u2713"
+}

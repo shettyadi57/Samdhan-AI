@@ -1,0 +1,67 @@
+{
+  "candidate_id": "CAND-01-9EBD979A",
+  "total_ranges": 3,
+  "provenance": [
+    {
+      "output_range": [
+        0,
+        396
+      ],
+      "source_fragment": "FRAG-62C283F4D3BB",
+      "source_offset": -1,
+      "edge_from": null,
+      "edge_score": 1.0,
+      "edge_evidence": [
+        "Initial segment (head of reconstruction chain)"
+      ],
+      "validation_result": {
+        "format_valid": true,
+        "format_type": "JPEG",
+        "score": 100.0
+      }
+    },
+    {
+      "output_range": [
+        397,
+        791
+      ],
+      "source_fragment": "FRAG-D59829F54D33",
+      "source_offset": -1,
+      "edge_from": "FRAG-62C283F4D3BB",
+      "edge_score": 0.8276,
+      "edge_evidence": [
+        "Fragment A is header_only \u2014 actively seeking continuation",
+        "Fragment B has no format header \u2014 consistent with interior/tail position",
+        "entropy delta boundary score: 95.1/100",
+        "JPEG validation: SOI=\u2713, EOI=\u2713, Markers=\u2713, Entropy=\u2713",
+        "entropy tail=6.000, head=6.000, delta=0.000"
+      ],
+      "validation_result": {
+        "format_valid": true,
+        "format_type": "JPEG",
+        "score": 100.0
+      }
+    },
+    {
+      "output_range": [
+        792,
+        1188
+      ],
+      "source_fragment": "FRAG-DDD6C23ECA51",
+      "source_offset": -1,
+      "edge_from": "FRAG-D59829F54D33",
+      "edge_score": 0.6166,
+      "edge_evidence": [
+        "Fragment B has no format header \u2014 consistent with interior/tail position",
+        "entropy delta boundary score: 99.5/100",
+        "no type detected on either fragment \u2014 structural test skipped",
+        "entropy tail=5.938, head=6.000, delta=0.062"
+      ],
+      "validation_result": {
+        "format_valid": true,
+        "format_type": "JPEG",
+        "score": 100.0
+      }
+    }
+  ]
+}

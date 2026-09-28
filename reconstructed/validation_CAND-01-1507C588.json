@@ -1,0 +1,43 @@
+{
+  "format_type": "ZIP",
+  "format_valid": true,
+  "score": 100.0,
+  "checks": [
+    {
+      "name": "local_file_headers",
+      "passed": true,
+      "description": "ZIP Local File Header signature (PK\\x03\\x04) located",
+      "offset": 183,
+      "details": null
+    },
+    {
+      "name": "central_directory",
+      "passed": true,
+      "description": "ZIP Central Directory record (PK\\x01\\x02) located",
+      "offset": 41,
+      "details": null
+    },
+    {
+      "name": "end_of_central_directory",
+      "passed": true,
+      "description": "ZIP End of Central Directory (EOCD: PK\\x05\\x06) verified",
+      "offset": 161,
+      "details": null
+    },
+    {
+      "name": "zip_container_integrity",
+      "passed": true,
+      "description": "ZIP container table parsed (0 files)",
+      "offset": -1,
+      "details": null
+    }
+  ],
+  "issues": [],
+  "metadata": {
+    "total_entries": 3,
+    "cd_size": 181,
+    "cd_start_offset": 372,
+    "zipfile_error": "Bad offset for central directory"
+  },
+  "reason": "ZIP validation: LFH=\u2713, CD=\u2713, EOCD=\u2713 (0 entries)"
+}

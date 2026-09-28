@@ -1,0 +1,112 @@
+{
+  "candidate_id": "CAND-01-6F5D1242",
+  "total_ranges": 5,
+  "provenance": [
+    {
+      "output_range": [
+        0,
+        39
+      ],
+      "source_fragment": "FRAG-33716F84C9C1",
+      "source_offset": 999999,
+      "edge_from": null,
+      "edge_score": 1.0,
+      "edge_evidence": [
+        "Initial segment (head of reconstruction chain)"
+      ],
+      "validation_result": {
+        "format_valid": true,
+        "format_type": "PDF",
+        "score": 100.0
+      }
+    },
+    {
+      "output_range": [
+        40,
+        157
+      ],
+      "source_fragment": "FRAG-0B094B314DCE",
+      "source_offset": 118,
+      "edge_from": "FRAG-33716F84C9C1",
+      "edge_score": 0.5323,
+      "edge_evidence": [
+        "Fragment A is header_only \u2014 actively seeking continuation",
+        "Fragment B has no format header \u2014 consistent with interior/tail position",
+        "entropy delta boundary score: 79.9/100",
+        "JPEG validation: SOI=\u2713, EOI=\u2717, Markers=\u2717, Entropy=\u2713",
+        "entropy tail=4.062, head=4.463, delta=0.402",
+        "Physical offset contradiction: A at 999999, B at 118 \u2014 B predates A in source"
+      ],
+      "validation_result": {
+        "format_valid": true,
+        "format_type": "PDF",
+        "score": 100.0
+      }
+    },
+    {
+      "output_range": [
+        158,
+        275
+      ],
+      "source_fragment": "FRAG-D3D08BC39467",
+      "source_offset": 236,
+      "edge_from": "FRAG-0B094B314DCE",
+      "edge_score": 0.6026,
+      "edge_evidence": [
+        "Fragment B has no format header \u2014 consistent with interior/tail position",
+        "entropy delta boundary score: 94.7/100",
+        "no type detected on either fragment \u2014 structural test skipped",
+        "entropy tail=4.413, head=4.595, delta=0.182"
+      ],
+      "validation_result": {
+        "format_valid": true,
+        "format_type": "PDF",
+        "score": 100.0
+      }
+    },
+    {
+      "output_range": [
+        276,
+        393
+      ],
+      "source_fragment": "FRAG-52C7BBE18189",
+      "source_offset": 0,
+      "edge_from": "FRAG-D3D08BC39467",
+      "edge_score": 0.5212,
+      "edge_evidence": [
+        "Fragment B starts with a format header \u2014 may be independent file, not continuation",
+        "entropy delta boundary score: 93.8/100",
+        "PDF validation: %PDF=\u2713 (v1.7), Objects=\u2713 (2 found), Xref=\u2713, %%EOF=\u2717",
+        "entropy tail=3.326, head=4.565, delta=1.239",
+        "Physical offset contradiction: A at 236, B at 0 \u2014 B predates A in source"
+      ],
+      "validation_result": {
+        "format_valid": true,
+        "format_type": "PDF",
+        "score": 100.0
+      }
+    },
+    {
+      "output_range": [
+        394,
+        510
+      ],
+      "source_fragment": "FRAG-72D91327FC97",
+      "source_offset": 354,
+      "edge_from": "FRAG-52C7BBE18189",
+      "edge_score": 0.625,
+      "edge_evidence": [
+        "Fragment A is header_only \u2014 actively seeking continuation",
+        "Fragment B has no format header \u2014 consistent with interior/tail position",
+        "entropy delta boundary score: 68.5/100",
+        "PDF validation: %PDF=\u2713 (v1.7), Objects=\u2713 (2 found), Xref=\u2717, %%EOF=\u2713",
+        "entropy tail=4.468, head=2.082, delta=2.386"
+      ],
+      "validation_result": {
+        "format_valid": true,
+        "format_type": "PDF",
+        "score": 100.0
+      }
+    }
+  ]
+}

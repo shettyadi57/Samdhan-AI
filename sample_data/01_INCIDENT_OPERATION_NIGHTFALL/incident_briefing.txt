@@ -1,0 +1,28 @@
+================================================================================
+SAMDHAN AI -- DIGITAL FORENSIC INCIDENT BRIEFING REPORT
+================================================================================
+Case Identifier  : CASE-2026-NIGHTFALL
+Operation Name   : Operation Nightfall (Ransomware Attack & Shadow Copy Purge)
+Lead Examiner    : Det. H. Chen (Digital Forensics Unit, Badge #4891)
+Target Media     : Seagate Barracuda 2TB SATA (Serial: W1E89L90) Ext4 RAW Image
+Incident Window  : 2026-09-24 14:00:00 UTC to 2026-09-24 22:30:00 UTC
+Acquisition Tool : SAMDHAN AI Forensics Pipeline (Hardware Write-Blocker Bitstream)
+--------------------------------------------------------------------------------
+INCIDENT SYNOPSIS:
+At 16:11 UTC, an external threat actor leveraged compromised administrator credentials
+(hchen_admin) sourced from IP 198.51.100.24 to gain root privileges on the primary
+enterprise cluster. The attacker deployed the BlackCat ransomware payload, executed
+vssadmin shadow copy purges, dropped key financial audit tables, and exfiltrated 420GB
+of intellectual property to exfil.darkmesh.onion.
+
+PRIMARY INDICATORS OF COMPROMISE (IOCs):
+  - IP Address     : 198.51.100.24 (Foreign Tor Exit Node)
+  - C2 Domain      : exfil.darkmesh.onion
+  - BTC Wallet     : bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh
+  - Binary Name    : blackcat_ransom.exe
+  - Inhibit Cmd    : vssadmin delete shadows /all /quiet
+
+CHAIN OF CUSTODY CERTIFICATION:
+All evidence files listed below have been hashed using FIPS 180-4 compliant SHA-256.
+Evidence is write-locked and verified tamper-evident.
+================================================================================

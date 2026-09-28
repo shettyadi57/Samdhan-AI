@@ -1,0 +1,23 @@
+{
+  "description": "Deterministic binary fragments for Feature 01 (Intelligent Fragment Reconstruction)",
+  "scenarios": [
+    {
+      "id": "A",
+      "folder": "SCENARIO_A_SHUFFLED_JPEG",
+      "condition": "5 Fragments Shuffled in Random Order",
+      "objective": "Demonstrate directed graph edge scoring & reordering into 100% valid JPEG"
+    },
+    {
+      "id": "B",
+      "folder": "SCENARIO_B_MISSING_TAIL_PNG",
+      "condition": "Omitted IEND Terminator",
+      "objective": "Demonstrate missing chunk gap detection & partial reconstruction flag"
+    },
+    {
+      "id": "C",
+      "folder": "SCENARIO_C_CORRUPTED_MIDDLE_PDF",
+      "condition": "Corrupted Middle Object (Zero-Fill)",
+      "objective": "Demonstrate structural validator error localisation & confidence degradation"
+    }
+  ]
+}

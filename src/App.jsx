@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Header from './components/Header';
 import HeroCyberBanner from './components/HeroCyberBanner';
 import InputScreen from './components/InputScreen';
@@ -9,12 +9,18 @@ import AiVsRuleModal from './components/AiVsRuleModal';
 import AuditLogModal from './components/AuditLogModal';
 import IntegrityDashboard from './components/IntegrityDashboard';
 import InvestigationCenter from './components/InvestigationCenter';
+import FragmentReconstructionWorkflow from './components/FragmentReconstructionWorkflow';
+import JuryDemoModal from './components/JuryDemoModal';
 import DEMO_ARTIFACTS, { computeDemoStats } from './data/demoArtifacts';
 import { SAMPLE_CASES, MOCK_ARTIFACTS, INITIAL_AUDIT_LOG } from './data/mockForensicData';
 
 export default function App() {
   const [currentScreen, setCurrentScreen] = useState('input'); // 'input', 'processing', 'dashboard'
   const [isAnalyzed, setIsAnalyzed] = useState(false);
+
+  useEffect(() => {
+    document.title = "SAMDHAN AI | Digital Forensics & Carved Fragment Triaging Platform";
+  }, []);
 
   // Use the new 15-artifact demo dataset merged with mock artifacts
   const artifacts = [...DEMO_ARTIFACTS, ...MOCK_ARTIFACTS.filter(m =>
@@ -26,6 +32,7 @@ export default function App() {
   const [integrityArtifact, setIntegrityArtifact] = useState(null);
   const [showAiRules, setShowAiRules] = useState(false);
   const [showAuditLog, setShowAuditLog] = useState(false);
+  const [showJuryPlaybook, setShowJuryPlaybook] = useState(false);
   const [auditLogs, setAuditLogs] = useState(INITIAL_AUDIT_LOG);
 
   const handleAddAuditLog = (entry) => {
@@ -122,6 +129,7 @@ export default function App() {
         activeCase={caseContext}
         onOpenAiRules={() => setShowAiRules(true)}
         onOpenAuditLog={() => setShowAuditLog(true)}
+        onOpenJuryPlaybook={() => setShowJuryPlaybook(true)}
         onExportReport={handleExportReport}
         isAnalyzed={isAnalyzed}
       />
@@ -169,6 +177,10 @@ export default function App() {
             artifacts={artifacts}
             onAddAuditLog={handleAddAuditLog}
           />
+        )}
+
+        {currentScreen === 'reconstruction' && (
+          <FragmentReconstructionWorkflow />
         )}
       </main>
 
@@ -223,6 +235,29 @@ export default function App() {
           onClose={() => setShowAuditLog(false)}
           caseContext={caseContext}
           auditLogs={auditLogs}
+        />
+      )}
+
+      {showJuryPlaybook && (
+        <JuryDemoModal
+          onClose={() => setShowJuryPlaybook(false)}
+          onLoadPreset={(presetKey) => {
+            const p = SAMPLE_CASES[presetKey];
+            if (p) {
+              setCaseContext({
+                caseId: p.id,
+                caseTitle: p.title,
+                investigator: p.investigator,
+                targetDevice: p.targetDevice,
+                incidentStart: p.incidentStart.slice(0, 16),
+                incidentEnd: p.incidentEnd.slice(0, 16),
+                iocs: p.iocs.join(', '),
+                rawImageHash: p.rawImageHash,
+                totalFragments: p.totalFragments,
+              });
+              setCurrentScreen('input');
+            }
+          }}
         />
       )}
     </div>

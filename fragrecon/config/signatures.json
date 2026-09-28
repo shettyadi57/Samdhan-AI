@@ -1,0 +1,92 @@
+[
+  {
+    "type":             "PDF",
+    "category":         "Document",
+    "header":           "255044462d",
+    "footer":           "2525454f46",
+    "max_size_mb":      100,
+    "structural_check": "pdf",
+    "header_offset":    0,
+    "note":             "%PDF-  →  %%EOF"
+  },
+  {
+    "type":             "JPEG",
+    "category":         "Photo",
+    "header":           "ffd8ffe0",
+    "footer":           "ffd9",
+    "max_size_mb":      20,
+    "structural_check": "jpeg",
+    "header_offset":    0,
+    "note":             "JPEG JFIF (APP0)"
+  },
+  {
+    "type":             "JPEG",
+    "category":         "Photo",
+    "header":           "ffd8ffe1",
+    "footer":           "ffd9",
+    "max_size_mb":      20,
+    "structural_check": "jpeg",
+    "header_offset":    0,
+    "note":             "JPEG EXIF (APP1)"
+  },
+  {
+    "type":             "JPEG",
+    "category":         "Photo",
+    "header":           "ffd8ffdb",
+    "footer":           "ffd9",
+    "max_size_mb":      20,
+    "structural_check": "jpeg",
+    "header_offset":    0,
+    "note":             "JPEG raw DQT start (no APP marker)"
+  },
+  {
+    "type":             "PNG",
+    "category":         "Photo",
+    "header":           "89504e470d0a1a0a",
+    "footer":           "49454e44ae426082",
+    "max_size_mb":      50,
+    "structural_check": "png",
+    "header_offset":    0,
+    "note":             "PNG signature  →  IEND chunk CRC"
+  },
+  {
+    "type":             "ZIP",
+    "category":         "Document",
+    "header":           "504b0304",
+    "footer":           "504b0506",
+    "max_size_mb":      200,
+    "structural_check": "zip",
+    "header_offset":    0,
+    "note":             "ZIP local-file-header  →  End-of-Central-Directory"
+  },
+  {
+    "type":             "SQLITE",
+    "category":         "DB log",
+    "header":           "53514c69746520666f726d617420330000",
+    "footer":           "",
+    "max_size_mb":      500,
+    "structural_check": "sqlite",
+    "header_offset":    0,
+    "note":             "SQLite 3 magic — no canonical footer; stitching only"
+  },
+  {
+    "type":             "PCAP",
+    "category":         "System trace",
+    "header":           "d4c3b2a1",
+    "footer":           "",
+    "max_size_mb":      500,
+    "structural_check": "pcap",
+    "header_offset":    0,
+    "note":             "Libpcap little-endian magic — no footer"
+  },
+  {
+    "type":             "EVTX",
+    "category":         "System trace",
+    "header":           "456c6646696c6500000000000000000000000000",
+    "footer":           "",
+    "max_size_mb":      200,
+    "structural_check": "evtx",
+    "header_offset":    0,
+    "note":             "Windows XML Event Log"
+  }
+]

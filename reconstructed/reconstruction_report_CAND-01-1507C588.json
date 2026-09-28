@@ -1,0 +1,410 @@
+{
+  "candidate_id": "CAND-01-1507C588",
+  "reconstructed_sha256": "1507c58899c594b7d12be1bdaa2f13a78250244beeea3c16e1b9e00e7e048ef4",
+  "source_evidence_sha256": "6231caf81f264e8bbd1997aba0725834a8e61af1b7593d5ccd6bd83f73e09788",
+  "total_reconstructed_bytes": 615,
+  "byte_coverage": 1.0696,
+  "final_status": "uncertain",
+  "format_type": "ZIP",
+  "format_validation": {
+    "format_type": "ZIP",
+    "format_valid": true,
+    "score": 100.0,
+    "checks": [
+      {
+        "name": "local_file_headers",
+        "passed": true,
+        "description": "ZIP Local File Header signature (PK\\x03\\x04) located",
+        "offset": 183,
+        "details": null
+      },
+      {
+        "name": "central_directory",
+        "passed": true,
+        "description": "ZIP Central Directory record (PK\\x01\\x02) located",
+        "offset": 41,
+        "details": null
+      },
+      {
+        "name": "end_of_central_directory",
+        "passed": true,
+        "description": "ZIP End of Central Directory (EOCD: PK\\x05\\x06) verified",
+        "offset": 161,
+        "details": null
+      },
+      {
+        "name": "zip_container_integrity",
+        "passed": true,
+        "description": "ZIP container table parsed (0 files)",
+        "offset": -1,
+        "details": null
+      }
+    ],
+    "issues": [],
+    "metadata": {
+      "total_entries": 3,
+      "cd_size": 181,
+      "cd_start_offset": 372,
+      "zipfile_error": "Bad offset for central directory"
+    },
+    "reason": "ZIP validation: LFH=\u2713, CD=\u2713, EOCD=\u2713 (0 entries)"
+  },
+  "fragments_used": [
+    {
+      "fragment_id": "FRAG-33716F84C9C1",
+      "length": 40
+    },
+    {
+      "fragment_id": "FRAG-E429F8A8C192",
+      "length": 143
+    },
+    {
+      "fragment_id": "FRAG-4964BAA415CE",
+      "length": 144
+    },
+    {
+      "fragment_id": "FRAG-83D324DCCEFC",
+      "length": 144
+    },
+    {
+      "fragment_id": "FRAG-D9CFDF94D52C",
+      "length": 144
+    }
+  ],
+  "fragments_missing": [],
+  "corrupted_fragments": [
+    {
+      "fragment_id": "FRAG-33716F84C9C1",
+      "corruption_flags": [
+        "truncated_header_fragment",
+        "jpeg_sos_marker_missing",
+        "jpeg_eoi_marker_missing"
+      ],
+      "affected_bytes": "ffd8ffe000104a46494600010100000100010000464f524549474e5f4a504547",
+      "repair_performed": false
+    }
+  ],
+  "fragment_ordering": [
+    "FRAG-33716F84C9C1",
+    "FRAG-E429F8A8C192",
+    "FRAG-4964BAA415CE",
+    "FRAG-83D324DCCEFC",
+    "FRAG-D9CFDF94D52C"
+  ],
+  "edge_scores": [
+    57.04,
+    46.9,
+    67.73,
+    40.21
+  ],
+  "edge_evidence": [
+    {
+      "from": "FRAG-83D324DCCEFC",
+      "to": "FRAG-E429F8A8C192",
+      "evidence": [
+        "Fragment B has no format header \u2014 consistent with interior/tail position",
+        "entropy delta boundary score: 52.8/100",
+        "no type detected on either fragment \u2014 structural test skipped",
+        "entropy tail=3.783, head=3.842, delta=0.059"
+      ]
+    },
+    {
+      "from": "FRAG-83D324DCCEFC",
+      "to": "FRAG-4964BAA415CE",
+      "evidence": [
+        "Fragment B starts with a format header \u2014 may be independent file, not continuation",
+        "entropy delta boundary score: 100.0/100",
+        "ZIP validation: LFH=\u2713, CD=\u2713, EOCD=\u2717 (0 entries)",
+        "entropy tail=3.783, head=4.912, delta=1.129",
+        "Physical offset contradiction: A at 288, B at 0 \u2014 B predates A in source"
+      ]
+    },
+    {
+      "from": "FRAG-83D324DCCEFC",
+      "to": "FRAG-D9CFDF94D52C",
+      "evidence": [
+        "Fragment B has no format header \u2014 consistent with interior/tail position",
+        "entropy delta boundary score: 45.1/100",
+        "no type detected on either fragment \u2014 structural test skipped",
+        "entropy tail=3.783, head=6.000, delta=2.217",
+        "Physical offset contradiction: A at 288, B at 144 \u2014 B predates A in source"
+      ]
+    },
+    {
+      "from": "FRAG-83D324DCCEFC",
+      "to": "FRAG-33716F84C9C1",
+      "evidence": [
+        "Fragment B starts with a format header \u2014 may be independent file, not continuation",
+        "entropy delta boundary score: 57.2/100",
+        "JPEG validation: SOI=\u2717, EOI=\u2717, Markers=\u2717, Entropy=\u2713",
+        "entropy tail=3.783, head=4.062, delta=0.279"
+      ]
+    },
+    {
+      "from": "FRAG-33716F84C9C1",
+      "to": "FRAG-E429F8A8C192",
+      "evidence": [
+        "Fragment A is header_only \u2014 actively seeking continuation",
+        "Fragment B has no format header \u2014 consistent with interior/tail position",
+        "entropy delta boundary score: 95.6/100",
+        "JPEG validation: SOI=\u2713, EOI=\u2717, Markers=\u2717, Entropy=\u2713",
+        "entropy tail=4.062, head=3.842, delta=0.220",
+        "Physical offset contradiction: A at 999999, B at 432 \u2014 B predates A in source"
+      ]
+    },
+    {
+      "from": "FRAG-33716F84C9C1",
+      "to": "FRAG-83D324DCCEFC",
+      "evidence": [
+        "Fragment A is header_only \u2014 actively seeking continuation",
+        "Fragment B has no format header \u2014 consistent with interior/tail position",
+        "entropy delta boundary score: 57.2/100",
+        "JPEG validation: SOI=\u2713, EOI=\u2717, Markers=\u2717, Entropy=\u2713",
+        "entropy tail=4.062, head=5.124, delta=1.063",
+        "Physical offset contradiction: A at 999999, B at 288 \u2014 B predates A in source"
+      ]
+    },
+    {
+      "from": "FRAG-33716F84C9C1",
+      "to": "FRAG-D9CFDF94D52C",
+      "evidence": [
+        "Fragment A is header_only \u2014 actively seeking continuation",
+        "Fragment B has no format header \u2014 consistent with interior/tail position",
+        "entropy delta boundary score: 2.3/100",
+        "JPEG validation: SOI=\u2713, EOI=\u2717, Markers=\u2717, Entropy=\u2713",
+        "entropy tail=4.062, head=6.000, delta=1.938",
+        "Physical offset contradiction: A at 999999, B at 144 \u2014 B predates A in source"
+      ]
+    },
+    {
+      "from": "FRAG-4964BAA415CE",
+      "to": "FRAG-83D324DCCEFC",
+      "evidence": [
+        "Fragment A is header_only \u2014 actively seeking continuation",
+        "Fragment B has no format header \u2014 consistent with interior/tail position",
+        "entropy delta boundary score: 100.0/100",
+        "ZIP validation: LFH=\u2713, CD=\u2713, EOCD=\u2717 (0 entries)",
+        "entropy tail=4.855, head=5.124, delta=0.270"
+      ]
+    },
+    {
+      "from": "FRAG-4964BAA415CE",
+      "to": "FRAG-E429F8A8C192",
+      "evidence": [
+        "Fragment A is header_only \u2014 actively seeking continuation",
+        "Fragment B has no format header \u2014 consistent with interior/tail position",
+        "entropy delta boundary score: 52.8/100",
+        "ZIP validation: LFH=\u2713, CD=\u2713, EOCD=\u2713 (0 entries)",
+        "entropy tail=4.855, head=3.842, delta=1.012"
+      ]
+    },
+    {
+      "from": "FRAG-4964BAA415CE",
+      "to": "FRAG-D9CFDF94D52C",
+      "evidence": [
+        "Fragment A is header_only \u2014 actively seeking continuation",
+        "Fragment B has no format header \u2014 consistent with interior/tail position",
+        "entropy delta boundary score: 45.1/100",
+        "ZIP validation: LFH=\u2713, CD=\u2717, EOCD=\u2717 (0 entries)",
+        "entropy tail=4.855, head=6.000, delta=1.145"
+      ]
+    },
+    {
+      "from": "FRAG-E429F8A8C192",
+      "to": "FRAG-4964BAA415CE",
+      "evidence": [
+        "Fragment B starts with a format header \u2014 may be independent file, not continuation",
+        "entropy delta boundary score: 52.8/100",
+        "ZIP validation: LFH=\u2713, CD=\u2713, EOCD=\u2713 (0 entries)",
+        "entropy tail=3.269, head=4.912, delta=1.643",
+        "Physical offset contradiction: A at 432, B at 0 \u2014 B predates A in source"
+      ]
+    },
+    {
+      "from": "FRAG-E429F8A8C192",
+      "to": "FRAG-83D324DCCEFC",
+      "evidence": [
+        "Fragment B has no format header \u2014 consistent with interior/tail position",
+        "entropy delta boundary score: 52.8/100",
+        "no type detected on either fragment \u2014 structural test skipped",
+        "entropy tail=3.269, head=5.124, delta=1.855",
+        "Physical offset contradiction: A at 432, B at 288 \u2014 B predates A in source"
+      ]
+    },
+    {
+      "from": "FRAG-E429F8A8C192",
+      "to": "FRAG-33716F84C9C1",
+      "evidence": [
+        "Fragment B starts with a format header \u2014 may be independent file, not continuation",
+        "entropy delta boundary score: 95.6/100",
+        "JPEG validation: SOI=\u2717, EOI=\u2717, Markers=\u2717, Entropy=\u2713",
+        "entropy tail=3.269, head=4.062, delta=0.792"
+      ]
+    },
+    {
+      "from": "FRAG-E429F8A8C192",
+      "to": "FRAG-D9CFDF94D52C",
+      "evidence": [
+        "Fragment B has no format header \u2014 consistent with interior/tail position",
+        "entropy delta boundary score: 0.0/100",
+        "no type detected on either fragment \u2014 structural test skipped",
+        "entropy tail=3.269, head=6.000, delta=2.731",
+        "Physical offset contradiction: A at 432, B at 144 \u2014 B predates A in source"
+      ]
+    },
+    {
+      "from": "FRAG-D9CFDF94D52C",
+      "to": "FRAG-83D324DCCEFC",
+      "evidence": [
+        "Fragment B has no format header \u2014 consistent with interior/tail position",
+        "entropy delta boundary score: 45.1/100",
+        "no type detected on either fragment \u2014 structural test skipped",
+        "entropy tail=5.756, head=5.124, delta=0.632"
+      ]
+    },
+    {
+      "from": "FRAG-D9CFDF94D52C",
+      "to": "FRAG-E429F8A8C192",
+      "evidence": [
+        "Fragment B has no format header \u2014 consistent with interior/tail position",
+        "entropy delta boundary score: 0.0/100",
+        "no type detected on either fragment \u2014 structural test skipped",
+        "entropy tail=5.756, head=3.842, delta=1.914"
+      ]
+    },
+    {
+      "from": "FRAG-D9CFDF94D52C",
+      "to": "FRAG-4964BAA415CE",
+      "evidence": [
+        "Fragment B starts with a format header \u2014 may be independent file, not continuation",
+        "entropy delta boundary score: 45.1/100",
+        "ZIP validation: LFH=\u2713, CD=\u2717, EOCD=\u2717 (0 entries)",
+        "entropy tail=5.756, head=4.912, delta=0.844",
+        "Physical offset contradiction: A at 144, B at 0 \u2014 B predates A in source"
+      ]
+    },
+    {
+      "from": "FRAG-D9CFDF94D52C",
+      "to": "FRAG-33716F84C9C1",
+      "evidence": [
+        "Fragment B starts with a format header \u2014 may be independent file, not continuation",
+        "entropy delta boundary score: 2.3/100",
+        "JPEG validation: SOI=\u2717, EOI=\u2717, Markers=\u2717, Entropy=\u2713",
+        "entropy tail=5.756, head=4.062, delta=1.694"
+      ]
+    }
+  ],
+  "provenance": [
+    {
+      "output_range": [
+        0,
+        39
+      ],
+      "source_fragment": "FRAG-33716F84C9C1",
+      "source_offset": 999999,
+      "edge_from": null,
+      "edge_score": 1.0,
+      "edge_evidence": [
+        "Initial segment (head of reconstruction chain)"
+      ],
+      "validation_result": {
+        "format_valid": true,
+        "format_type": "ZIP",
+        "score": 100.0
+      }
+    },
+    {
+      "output_range": [
+        40,
+        182
+      ],
+      "source_fragment": "FRAG-E429F8A8C192",
+      "source_offset": 432,
+      "edge_from": "FRAG-33716F84C9C1",
+      "edge_score": 0.5704,
+      "edge_evidence": [
+        "Fragment A is header_only \u2014 actively seeking continuation",
+        "Fragment B has no format header \u2014 consistent with interior/tail position",
+        "entropy delta boundary score: 95.6/100",
+        "JPEG validation: SOI=\u2713, EOI=\u2717, Markers=\u2717, Entropy=\u2713",
+        "entropy tail=4.062, head=3.842, delta=0.220",
+        "Physical offset contradiction: A at 999999, B at 432 \u2014 B predates A in source"
+      ],
+      "validation_result": {
+        "format_valid": true,
+        "format_type": "ZIP",
+        "score": 100.0
+      }
+    },
+    {
+      "output_range": [
+        183,
+        326
+      ],
+      "source_fragment": "FRAG-4964BAA415CE",
+      "source_offset": 0,
+      "edge_from": "FRAG-E429F8A8C192",
+      "edge_score": 0.469,
+      "edge_evidence": [
+        "Fragment B starts with a format header \u2014 may be independent file, not continuation",
+        "entropy delta boundary score: 52.8/100",
+        "ZIP validation: LFH=\u2713, CD=\u2713, EOCD=\u2713 (0 entries)",
+        "entropy tail=3.269, head=4.912, delta=1.643",
+        "Physical offset contradiction: A at 432, B at 0 \u2014 B predates A in source"
+      ],
+      "validation_result": {
+        "format_valid": true,
+        "format_type": "ZIP",
+        "score": 100.0
+      }
+    },
+    {
+      "output_range": [
+        327,
+        470
+      ],
+      "source_fragment": "FRAG-83D324DCCEFC",
+      "source_offset": 288,
+      "edge_from": "FRAG-4964BAA415CE",
+      "edge_score": 0.6773,
+      "edge_evidence": [
+        "Fragment A is header_only \u2014 actively seeking continuation",
+        "Fragment B has no format header \u2014 consistent with interior/tail position",
+        "entropy delta boundary score: 100.0/100",
+        "ZIP validation: LFH=\u2713, CD=\u2713, EOCD=\u2717 (0 entries)",
+        "entropy tail=4.855, head=5.124, delta=0.270"
+      ],
+      "validation_result": {
+        "format_valid": true,
+        "format_type": "ZIP",
+        "score": 100.0
+      }
+    },
+    {
+      "output_range": [
+        471,
+        614
+      ],
+      "source_fragment": "FRAG-D9CFDF94D52C",
+      "source_offset": 144,
+      "edge_from": "FRAG-83D324DCCEFC",
+      "edge_score": 0.4021,
+      "edge_evidence": [
+        "Fragment B has no format header \u2014 consistent with interior/tail position",
+        "entropy delta boundary score: 45.1/100",
+        "no type detected on either fragment \u2014 structural test skipped",
+        "entropy tail=3.783, head=6.000, delta=2.217",
+        "Physical offset contradiction: A at 288, B at 144 \u2014 B predates A in source"
+      ],
+      "validation_result": {
+        "format_valid": true,
+        "format_type": "ZIP",
+        "score": 100.0
+      }
+    }
+  ],
+  "created_at": "2026-09-25T19:51:37.726205+00:00",
+  "forensic_notes": [
+    "Structural check inconclusive (score=50) \u2014 ordering may be incomplete"
+  ]
+}

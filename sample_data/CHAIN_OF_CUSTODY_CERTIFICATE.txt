@@ -1,0 +1,47 @@
+================================================================================
+                  DIGITAL EVIDENCE CHAIN OF CUSTODY FORM                        
+           ISO/IEC 27037:2012 DIGITAL EVIDENCE COMPLIANCE STANDARD             
+================================================================================
+
+AGENCY / LAB      : Cyber Forensic & Incident Response Division (CFIR)
+INCIDENT MASTER ID: INC-2026-SAMDHAN-01
+FORENSIC EXAMINER : Senior Inspector / AI Forensics Lead
+ACQUISITION DATE  : 2026-09-26T10:45:00Z
+VERIFICATION TOOL : SAMDHAN AI Integrity Assessment Engine (v2.4.0)
+STORAGE LOCATION  : A:\Samdhan AI\Samdhan-AI\sample_data\
+
+--------------------------------------------------------------------------------
+ACQUIRED EVIDENCE ITEMS & CRYPTOGRAPHIC VERIFICATION:
+--------------------------------------------------------------------------------
+ITEM #01:
+  - File Name      : 01_INCIDENT_OPERATION_NIGHTFALL/seagate_barracuda_incident_dump.dd
+  - Physical Media : Seagate Barracuda 2TB SATA (S/N: W1E89L90)
+  - Carved Offsets : 0x0004F000 (Ransom Note), 0x0008A000 (Batch Wiper), 0x000E0000 (Auth DB)
+  - SHA-256 Hash   : f957b3fe4d3fef0ab698f4c2c2182605fcd684ce8d7832871310ce8f11ac1490
+  - MD5 Hash       : 0ba0e5c3cb22013a03f22501d7051733
+  - Integrity State: VERIFIED TAMPER-EVIDENT (READ-ONLY CLONE)
+
+ITEM #02:
+  - File Name      : 02_INCIDENT_PROJECT_AEGIS/sandisk_128gb_exfat_carved.raw
+  - Physical Media : SanDisk Ultra 128GB Flash Drive (S/N: SD-882190-EX)
+  - Carved Offsets : 0x00032000 (Exfiltration Bash Log), Unallocated CAD Schematics
+  - SHA-256 Hash   : 9b84ba3e78f7bc1bab845e56d8130c0a5b822aa10e58437e715491d8d6bc6606
+  - MD5 Hash       : b02eefa67cd7e2c7b391a61a53a0c5ee
+  - Integrity State: VERIFIED TAMPER-EVIDENT (READ-ONLY CLONE)
+
+ITEM #03:
+  - File Name      : 03_CARVED_FRAGMENTS_FOR_RECONSTRUCTION/
+  - Description    : Binary chunks under Scenarios A (Shuffled), B (Truncated), C (Corrupt)
+  - Purpose        : Feature 01 Live Reassembly Demonstration for Evaluation Jury
+
+ITEM #04:
+  - File Name      : 04_ARTIFACT_INTEGRITY_BENCHMARK/
+  - Description    : 15 Ground-Truth Specification Artifacts (ART-001 through ART-015)
+
+--------------------------------------------------------------------------------
+CUSTODIAL TRANSFER & LOG:
+  - Transferred From: Physical Acquisition Write-Blocker Bridge (Tableau T8u)
+  - Transferred To  : SAMDHAN AI Local Analysis Storage
+  - Authorization   : Judicial Warrant / Incident Response Directive 2026-CFIR
+  - Signature       : [DIGITALLY SIGNED VIA SAMDHAN AI CRYPTOGRAPHIC KEYSTORE]
+================================================================================

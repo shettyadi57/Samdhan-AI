@@ -1,0 +1,70 @@
+{
+  "format_type": "PNG",
+  "format_valid": true,
+  "score": 100.0,
+  "checks": [
+    {
+      "name": "png_signature",
+      "passed": true,
+      "description": "PNG 8-byte signature (\\x89PNG\\r\\n\\x1a\\n) verified",
+      "offset": 0,
+      "details": null
+    },
+    {
+      "name": "chunk_structure",
+      "passed": true,
+      "description": "PNG chunk sequence well-formed (IHDR header found, valid chunk sequence)",
+      "offset": -1,
+      "details": null
+    },
+    {
+      "name": "chunk_lengths",
+      "passed": true,
+      "description": "All chunk length fields stay within byte stream boundaries",
+      "offset": -1,
+      "details": null
+    },
+    {
+      "name": "crc_integrity",
+      "passed": true,
+      "description": "Chunk CRC-32 checksums verified against payload",
+      "offset": -1,
+      "details": null
+    },
+    {
+      "name": "iend_terminal",
+      "passed": true,
+      "description": "PNG IEND terminating chunk verified",
+      "offset": -1,
+      "details": null
+    }
+  ],
+  "issues": [
+    "40 unexpected trailing bytes after IEND chunk"
+  ],
+  "metadata": {
+    "chunks": [
+      {
+        "type": "IHDR",
+        "length": 13,
+        "offset": 8,
+        "crc_valid": true
+      },
+      {
+        "type": "IDAT",
+        "length": 566,
+        "offset": 33,
+        "crc_valid": true
+      },
+      {
+        "type": "IEND",
+        "length": 0,
+        "offset": 611,
+        "crc_valid": true
+      }
+    ],
+    "trailing_bytes": 40,
+    "dimensions": "16x16"
+  },
+  "reason": "PNG validation: Signature=\u2713, IHDR=\u2713, IEND=\u2713, CRCs=\u2713 (3 chunks)"
+}

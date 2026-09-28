@@ -30,7 +30,7 @@
       "accessed": null
     },
     "embedded_metadata": {},
-    "reconstructed_path": "C:\\Samdhan AI\\backend\\demo_data\\reconstructed\\art001_jpeg_intact.jpg"
+    "reconstructed_path": "A:\\Samdhan AI\\Samdhan-AI\\backend\\demo_data\\reconstructed\\art001_jpeg_intact.jpg"
   },
   {
     "artifact_id": "ART-002",
@@ -62,7 +62,7 @@
       "accessed": null
     },
     "embedded_metadata": {},
-    "reconstructed_path": "C:\\Samdhan AI\\backend\\demo_data\\reconstructed\\art002_jpeg_missing_tail.jpg"
+    "reconstructed_path": "A:\\Samdhan AI\\Samdhan-AI\\backend\\demo_data\\reconstructed\\art002_jpeg_missing_tail.jpg"
   },
   {
     "artifact_id": "ART-003",
@@ -95,7 +95,7 @@
       "accessed": null
     },
     "embedded_metadata": {},
-    "reconstructed_path": "C:\\Samdhan AI\\backend\\demo_data\\reconstructed\\art003_jpeg_corrupted_mid.jpg"
+    "reconstructed_path": "A:\\Samdhan AI\\Samdhan-AI\\backend\\demo_data\\reconstructed\\art003_jpeg_corrupted_mid.jpg"
   },
   {
     "artifact_id": "ART-004",
@@ -122,7 +122,7 @@
       "accessed": null
     },
     "embedded_metadata": {},
-    "reconstructed_path": "C:\\Samdhan AI\\backend\\demo_data\\reconstructed\\art004_pdf_intact.pdf"
+    "reconstructed_path": "A:\\Samdhan AI\\Samdhan-AI\\backend\\demo_data\\reconstructed\\art004_pdf_intact.pdf"
   },
   {
     "artifact_id": "ART-005",
@@ -155,7 +155,7 @@
       "accessed": null
     },
     "embedded_metadata": {},
-    "reconstructed_path": "C:\\Samdhan AI\\backend\\demo_data\\reconstructed\\art005_pdf_damaged_obj.pdf"
+    "reconstructed_path": "A:\\Samdhan AI\\Samdhan-AI\\backend\\demo_data\\reconstructed\\art005_pdf_damaged_obj.pdf"
   },
   {
     "artifact_id": "ART-006",
@@ -187,7 +187,7 @@
       "accessed": null
     },
     "embedded_metadata": {},
-    "reconstructed_path": "C:\\Samdhan AI\\backend\\demo_data\\reconstructed\\art006_pdf_missing_page.pdf"
+    "reconstructed_path": "A:\\Samdhan AI\\Samdhan-AI\\backend\\demo_data\\reconstructed\\art006_pdf_missing_page.pdf"
   },
   {
     "artifact_id": "ART-007",
@@ -214,7 +214,7 @@
       "accessed": null
     },
     "embedded_metadata": {},
-    "reconstructed_path": "C:\\Samdhan AI\\backend\\demo_data\\reconstructed\\art007_docx_intact.docx"
+    "reconstructed_path": "A:\\Samdhan AI\\Samdhan-AI\\backend\\demo_data\\reconstructed\\art007_docx_intact.docx"
   },
   {
     "artifact_id": "ART-008",
@@ -247,7 +247,7 @@
       "accessed": null
     },
     "embedded_metadata": {},
-    "reconstructed_path": "C:\\Samdhan AI\\backend\\demo_data\\reconstructed\\art008_docx_damaged_xml.docx"
+    "reconstructed_path": "A:\\Samdhan AI\\Samdhan-AI\\backend\\demo_data\\reconstructed\\art008_docx_damaged_xml.docx"
   },
   {
     "artifact_id": "ART-009",
@@ -279,7 +279,7 @@
       "accessed": null
     },
     "embedded_metadata": {},
-    "reconstructed_path": "C:\\Samdhan AI\\backend\\demo_data\\reconstructed\\art009_docx_broken_zip.docx"
+    "reconstructed_path": "A:\\Samdhan AI\\Samdhan-AI\\backend\\demo_data\\reconstructed\\art009_docx_broken_zip.docx"
   },
   {
     "artifact_id": "ART-010",
@@ -306,7 +306,7 @@
       "accessed": null
     },
     "embedded_metadata": {},
-    "reconstructed_path": "C:\\Samdhan AI\\backend\\demo_data\\reconstructed\\art010_sqlite_intact.db"
+    "reconstructed_path": "A:\\Samdhan AI\\Samdhan-AI\\backend\\demo_data\\reconstructed\\art010_sqlite_intact.db"
   },
   {
     "artifact_id": "ART-011",
@@ -339,7 +339,7 @@
       "accessed": null
     },
     "embedded_metadata": {},
-    "reconstructed_path": "C:\\Samdhan AI\\backend\\demo_data\\reconstructed\\art011_sqlite_damaged_page.db"
+    "reconstructed_path": "A:\\Samdhan AI\\Samdhan-AI\\backend\\demo_data\\reconstructed\\art011_sqlite_damaged_page.db"
   },
   {
     "artifact_id": "ART-012",
@@ -371,7 +371,7 @@
       "accessed": null
     },
     "embedded_metadata": {},
-    "reconstructed_path": "C:\\Samdhan AI\\backend\\demo_data\\reconstructed\\art012_sqlite_missing_records.db"
+    "reconstructed_path": "A:\\Samdhan AI\\Samdhan-AI\\backend\\demo_data\\reconstructed\\art012_sqlite_missing_records.db"
   },
   {
     "artifact_id": "ART-013",
@@ -398,7 +398,7 @@
       "accessed": null
     },
     "embedded_metadata": {},
-    "reconstructed_path": "C:\\Samdhan AI\\backend\\demo_data\\reconstructed\\art013_log_complete.log"
+    "reconstructed_path": "A:\\Samdhan AI\\Samdhan-AI\\backend\\demo_data\\reconstructed\\art013_log_complete.log"
   },
   {
     "artifact_id": "ART-014",
@@ -430,7 +430,7 @@
       "accessed": null
     },
     "embedded_metadata": {},
-    "reconstructed_path": "C:\\Samdhan AI\\backend\\demo_data\\reconstructed\\art014_log_missing_lines.log"
+    "reconstructed_path": "A:\\Samdhan AI\\Samdhan-AI\\backend\\demo_data\\reconstructed\\art014_log_missing_lines.log"
   },
   {
     "artifact_id": "ART-015",
@@ -457,6 +457,6 @@
       "accessed": null
     },
     "embedded_metadata": {},
-    "reconstructed_path": "C:\\Samdhan AI\\backend\\demo_data\\reconstructed\\art015_log_malformed.log"
+    "reconstructed_path": "A:\\Samdhan AI\\Samdhan-AI\\backend\\demo_data\\reconstructed\\art015_log_malformed.log"
   }
 ]

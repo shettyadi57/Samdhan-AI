@@ -1,0 +1,39 @@
+{
+  "case_id": "CASE-2026-NIGHTFALL",
+  "title": "Operation Nightfall - Ransomware Disk Dump",
+  "created_at": "2026-09-26T05:34:54.067085Z",
+  "evidence_files": [
+    {
+      "filename": "seagate_barracuda_incident_dump.dd",
+      "type": "Raw Disk Bitstream (.dd)",
+      "sector_offset": "0x00000000",
+      "sha256": "f957b3fe4d3fef0ab698f4c2c2182605fcd684ce8d7832871310ce8f11ac1490",
+      "md5": "0ba0e5c3cb22013a03f22501d7051733",
+      "size": 2097152
+    },
+    {
+      "filename": "carved_sec_004F3A20_ransom_note.txt",
+      "type": "Carved Ransom Note (UTF-8)",
+      "sector_offset": "0x0004F000",
+      "sha256": "273bba3962bf1b467200a4ac882f84f7b83fa9cbf40f687117fa176a811564a3",
+      "md5": "b9213bea67577ff678366be26487bee8",
+      "size": 601
+    },
+    {
+      "filename": "shadow_delete_script.bat",
+      "type": "Malicious Batch Script",
+      "sector_offset": "0x0008A000",
+      "sha256": "197c18c77797e655e8f24e1a95d582998fb9bdbcecc4b6e1c793f0b4158da2ca",
+      "md5": "6eebaacb2a320c7f546d5020686e9d1f",
+      "size": 389
+    },
+    {
+      "filename": "auth_audit_carve.db",
+      "type": "SQLite Forensic Database",
+      "sector_offset": "0x000E0000",
+      "sha256": "c0b80de0be9fd3f8464f82e7ea4072ff1176048c3673b521dc98ee261c3880e6",
+      "md5": "6e05801036431bfb8fe7e79030e17287",
+      "size": 12288
+    }
+  ]
+}

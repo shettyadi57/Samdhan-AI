@@ -1,0 +1,8 @@
+!!! ATTENTION INVESTORS & SYSTEM ADMINISTRATORS !!!
+All your virtual machines, hypervisors, and SQL clusters have been encrypted by BlackCat Ransomware Group.
+We have exfiltrated 420GB of confidential source code, customer records, and banking credentials.
+To purchase the private decryptor and avoid public leak on dark web:
+1. Visit Tor portal: http://exfil.darkmesh.onion/auth?id=9928-NIGHTFALL
+2. Deposit 15.5 BTC to: bitcoin:bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh
+Deadline: 72 hours from: 2026-09-24 18:00:00 UTC.
+Do NOT reboot or modify encrypted partitions, or your keys will be destroyed.

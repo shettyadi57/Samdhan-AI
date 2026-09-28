@@ -1,0 +1,90 @@
+{
+  "candidate_id": "CAND-01-5FA8EE0F",
+  "total_ranges": 4,
+  "provenance": [
+    {
+      "output_range": [
+        0,
+        155
+      ],
+      "source_fragment": "FRAG-C11CCA73C77D",
+      "source_offset": 0,
+      "edge_from": null,
+      "edge_score": 1.0,
+      "edge_evidence": [
+        "Initial segment (head of reconstruction chain)"
+      ],
+      "validation_result": {
+        "format_valid": false,
+        "format_type": "PNG",
+        "score": 45.0
+      }
+    },
+    {
+      "output_range": [
+        156,
+        311
+      ],
+      "source_fragment": "FRAG-5218F9CC610A",
+      "source_offset": 312,
+      "edge_from": "FRAG-C11CCA73C77D",
+      "edge_score": 0.6349,
+      "edge_evidence": [
+        "Fragment A is header_only \u2014 actively seeking continuation",
+        "Fragment B has no format header \u2014 consistent with interior/tail position",
+        "entropy delta boundary score: 82.9/100",
+        "partial assembly (2 internal markers found; full validation deferred)",
+        "entropy tail=5.781, head=5.688, delta=0.094"
+      ],
+      "validation_result": {
+        "format_valid": false,
+        "format_type": "PNG",
+        "score": 45.0
+      }
+    },
+    {
+      "output_range": [
+        312,
+        466
+      ],
+      "source_fragment": "FRAG-E6F011B96F75",
+      "source_offset": 468,
+      "edge_from": "FRAG-5218F9CC610A",
+      "edge_score": 0.612,
+      "edge_evidence": [
+        "Fragment B has no format header \u2014 consistent with interior/tail position",
+        "entropy delta boundary score: 98.3/100",
+        "no type detected on either fragment \u2014 structural test skipped",
+        "entropy tail=5.812, head=5.688, delta=0.125"
+      ],
+      "validation_result": {
+        "format_valid": false,
+        "format_type": "PNG",
+        "score": 45.0
+      }
+    },
+    {
+      "output_range": [
+        467,
+        622
+      ],
+      "source_fragment": "FRAG-59BF9091F4CB",
+      "source_offset": 156,
+      "edge_from": "FRAG-E6F011B96F75",
+      "edge_score": 0.215,
+      "edge_evidence": [
+        "Fragment B has no format header \u2014 consistent with interior/tail position",
+        "entropy delta boundary score: 0.0/100",
+        "no type detected on either fragment \u2014 structural test skipped",
+        "entropy tail=5.519, head=-0.000, delta=5.519",
+        "Physical offset contradiction: A at 468, B at 156 \u2014 B predates A in source",
+        "Fragment B is near-total zero-fill \u2014 unlikely meaningful continuation"
+      ],
+      "validation_result": {
+        "format_valid": false,
+        "format_type": "PNG",
+        "score": 45.0
+      }
+    }
+  ]
+}

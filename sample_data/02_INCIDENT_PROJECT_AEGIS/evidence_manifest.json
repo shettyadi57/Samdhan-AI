@@ -1,0 +1,35 @@
+{
+  "case_id": "CASE-2026-ESPIONAGE",
+  "title": "Project Aegis - Corporate Exfiltration USB Dump",
+  "created_at": "2026-09-26T05:34:54.304070Z",
+  "evidence_files": [
+    {
+      "filename": "sandisk_128gb_exfat_carved.raw",
+      "type": "Carved Unallocated Image (.raw)",
+      "sha256": "9b84ba3e78f7bc1bab845e56d8130c0a5b822aa10e58437e715491d8d6bc6606",
+      "md5": "b02eefa67cd7e2c7b391a61a53a0c5ee",
+      "size": 1572864
+    },
+    {
+      "filename": "confidential_cad_schematic.pdf",
+      "type": "Confidential Technical Schematic (.pdf)",
+      "sha256": "0cecc807a5c80bd10a7ae16d6ef8c7c45c6d314687e11549c95f4f174b73e0fa",
+      "md5": "52545f5fb1bb1c56e4dc197347e2f008",
+      "size": 3457
+    },
+    {
+      "filename": "executive_strategy_memo.docx",
+      "type": "Executive Strategy Memorandum (.docx)",
+      "sha256": "6db6a0c8d2fa7d3a41794734a391e768953b8d48e98425378657e6dcceaafff3",
+      "md5": "a422067123efce7ec082bb930f358029",
+      "size": 1332
+    },
+    {
+      "filename": "wiped_bash_history.log",
+      "type": "Recovered Exfiltration Shell History (.log)",
+      "sha256": "9ae56a91782684e6632726d07c06858782ad7312812861b72fab6f4cdca1a9cb",
+      "md5": "b6e2424fd572a130d57572c52a7728bc",
+      "size": 577
+    }
+  ]
+}

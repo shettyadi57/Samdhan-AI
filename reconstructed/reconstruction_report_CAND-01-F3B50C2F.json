@@ -1,0 +1,354 @@
+{
+  "candidate_id": "CAND-01-F3B50C2F",
+  "reconstructed_sha256": "f3b50c2f506288c2629a660ce6e6c5a8b89747dbb8a007fe97ae6e8a1a7a8fc9",
+  "source_evidence_sha256": "13278fbc6263fa02f0a0e71e1b391690f52b43f82ca83f9e429cb365cda91ba8",
+  "total_reconstructed_bytes": 1189,
+  "byte_coverage": 1.0,
+  "final_status": "uncertain",
+  "format_type": "JPEG",
+  "format_validation": {
+    "format_type": "JPEG",
+    "format_valid": true,
+    "score": 100.0,
+    "checks": [
+      {
+        "name": "soi_marker",
+        "passed": true,
+        "description": "JPEG Start of Image (SOI: 0xFFD8) at offset 0",
+        "offset": 0,
+        "details": null
+      },
+      {
+        "name": "segment_lengths",
+        "passed": true,
+        "description": "JPEG segment lengths fit within payload bounds",
+        "offset": -1,
+        "details": {
+          "dqt": true,
+          "sof": true,
+          "dht": true,
+          "sos": true
+        }
+      },
+      {
+        "name": "entropy_stream",
+        "passed": true,
+        "description": "JPEG entropy-coded stream validated (byte stuffing & markers)",
+        "offset": -1,
+        "details": null
+      },
+      {
+        "name": "eoi_marker",
+        "passed": true,
+        "description": "JPEG End of Image (EOI: 0xFFD9) marker verified",
+        "offset": 1187,
+        "details": null
+      }
+    ],
+    "issues": [],
+    "metadata": {
+      "markers_found": [
+        {
+          "marker": "0xFFE0",
+          "offset": 2
+        },
+        {
+          "marker": "0xFFDB",
+          "offset": 20
+        },
+        {
+          "marker": "0xFFC0",
+          "offset": 89
+        },
+        {
+          "marker": "0xFFC4",
+          "offset": 108
+        },
+        {
+          "marker": "0xFFDA",
+          "offset": 145
+        }
+      ],
+      "entropy_scan_bytes": 732,
+      "dimensions": "64x64",
+      "mode": "RGB"
+    },
+    "reason": "JPEG validation: SOI=\u2713, EOI=\u2713, Markers=\u2713, Entropy=\u2713"
+  },
+  "fragments_used": [
+    {
+      "fragment_id": "FRAG-5A067E4B85A6",
+      "length": 298
+    },
+    {
+      "fragment_id": "FRAG-B9F6DD7BC4F6",
+      "length": 298
+    },
+    {
+      "fragment_id": "FRAG-6F51E35899CC",
+      "length": 295
+    },
+    {
+      "fragment_id": "FRAG-314F47CF9B9E",
+      "length": 298
+    }
+  ],
+  "fragments_missing": [],
+  "corrupted_fragments": [
+    {
+      "fragment_id": "FRAG-5A067E4B85A6",
+      "corruption_flags": [
+        "jpeg_eoi_marker_missing"
+      ],
+      "affected_bytes": "ffd8ffe000104a46494600010100000100010000ffdb0043000104070a0d1013",
+      "repair_performed": false
+    },
+    {
+      "fragment_id": "FRAG-314F47CF9B9E",
+      "corruption_flags": [
+        "near_total_zero_fill",
+        "uniform_byte_pattern"
+      ],
+      "affected_bytes": "0000000000000000000000000000000000000000000000000000000000000000",
+      "repair_performed": false
+    }
+  ],
+  "fragment_ordering": [
+    "FRAG-5A067E4B85A6",
+    "FRAG-B9F6DD7BC4F6",
+    "FRAG-6F51E35899CC",
+    "FRAG-314F47CF9B9E"
+  ],
+  "edge_scores": [
+    75.77,
+    62.0,
+    21.5
+  ],
+  "edge_evidence": [
+    {
+      "from": "FRAG-B9F6DD7BC4F6",
+      "to": "FRAG-6F51E35899CC",
+      "evidence": [
+        "Fragment B has no format header \u2014 consistent with interior/tail position",
+        "entropy delta boundary score: 100.0/100",
+        "no type detected on either fragment \u2014 structural test skipped",
+        "entropy tail=6.000, head=6.000, delta=0.000"
+      ]
+    },
+    {
+      "from": "FRAG-B9F6DD7BC4F6",
+      "to": "FRAG-5A067E4B85A6",
+      "evidence": [
+        "Fragment B starts with a format header \u2014 may be independent file, not continuation",
+        "entropy delta boundary score: 54.8/100",
+        "JPEG validation: SOI=\u2717, EOI=\u2717, Markers=\u2713, Entropy=\u2713",
+        "entropy tail=6.000, head=5.130, delta=0.870",
+        "Physical offset contradiction: A at 596, B at 0 \u2014 B predates A in source"
+      ]
+    },
+    {
+      "from": "FRAG-B9F6DD7BC4F6",
+      "to": "FRAG-314F47CF9B9E",
+      "evidence": [
+        "Fragment B has no format header \u2014 consistent with interior/tail position",
+        "entropy delta boundary score: 0.0/100",
+        "no type detected on either fragment \u2014 structural test skipped",
+        "entropy tail=6.000, head=-0.000, delta=6.000",
+        "Physical offset contradiction: A at 596, B at 298 \u2014 B predates A in source",
+        "Fragment B is near-total zero-fill \u2014 unlikely meaningful continuation"
+      ]
+    },
+    {
+      "from": "FRAG-5A067E4B85A6",
+      "to": "FRAG-6F51E35899CC",
+      "evidence": [
+        "Fragment A is header_only \u2014 actively seeking continuation",
+        "Fragment B has no format header \u2014 consistent with interior/tail position",
+        "entropy delta boundary score: 67.6/100",
+        "JPEG validation: SOI=\u2713, EOI=\u2713, Markers=\u2713, Entropy=\u2713",
+        "entropy tail=6.000, head=6.000, delta=0.000"
+      ]
+    },
+    {
+      "from": "FRAG-5A067E4B85A6",
+      "to": "FRAG-B9F6DD7BC4F6",
+      "evidence": [
+        "Fragment A is header_only \u2014 actively seeking continuation",
+        "Fragment B has no format header \u2014 consistent with interior/tail position",
+        "entropy delta boundary score: 67.6/100",
+        "partial assembly (4 internal markers found; full validation deferred)",
+        "entropy tail=6.000, head=6.000, delta=0.000"
+      ]
+    },
+    {
+      "from": "FRAG-5A067E4B85A6",
+      "to": "FRAG-314F47CF9B9E",
+      "evidence": [
+        "Fragment A is header_only \u2014 actively seeking continuation",
+        "Fragment B has no format header \u2014 consistent with interior/tail position",
+        "entropy delta boundary score: 0.0/100",
+        "partial assembly (4 internal markers found; full validation deferred)",
+        "entropy tail=6.000, head=-0.000, delta=6.000",
+        "Fragment B is near-total zero-fill \u2014 unlikely meaningful continuation"
+      ]
+    },
+    {
+      "from": "FRAG-6F51E35899CC",
+      "to": "FRAG-B9F6DD7BC4F6",
+      "evidence": [
+        "Fragment B has no format header \u2014 consistent with interior/tail position",
+        "entropy delta boundary score: 99.5/100",
+        "no type detected on either fragment \u2014 structural test skipped",
+        "entropy tail=5.938, head=6.000, delta=0.062",
+        "Physical offset contradiction: A at 894, B at 596 \u2014 B predates A in source"
+      ]
+    },
+    {
+      "from": "FRAG-6F51E35899CC",
+      "to": "FRAG-5A067E4B85A6",
+      "evidence": [
+        "Fragment B starts with a format header \u2014 may be independent file, not continuation",
+        "entropy delta boundary score: 55.3/100",
+        "JPEG validation: SOI=\u2717, EOI=\u2713, Markers=\u2713, Entropy=\u2713",
+        "entropy tail=5.938, head=5.130, delta=0.807",
+        "Physical offset contradiction: A at 894, B at 0 \u2014 B predates A in source"
+      ]
+    },
+    {
+      "from": "FRAG-6F51E35899CC",
+      "to": "FRAG-314F47CF9B9E",
+      "evidence": [
+        "Fragment B has no format header \u2014 consistent with interior/tail position",
+        "entropy delta boundary score: 0.0/100",
+        "no type detected on either fragment \u2014 structural test skipped",
+        "entropy tail=5.938, head=-0.000, delta=5.938",
+        "Physical offset contradiction: A at 894, B at 298 \u2014 B predates A in source",
+        "Fragment B is near-total zero-fill \u2014 unlikely meaningful continuation"
+      ]
+    },
+    {
+      "from": "FRAG-314F47CF9B9E",
+      "to": "FRAG-B9F6DD7BC4F6",
+      "evidence": [
+        "Fragment B has no format header \u2014 consistent with interior/tail position",
+        "entropy delta boundary score: 0.0/100",
+        "no type detected on either fragment \u2014 structural test skipped",
+        "entropy tail=-0.000, head=6.000, delta=6.000",
+        "Fragment A has critical corruption flags: ['near_total_zero_fill', 'uniform_byte_pattern']"
+      ]
+    },
+    {
+      "from": "FRAG-314F47CF9B9E",
+      "to": "FRAG-6F51E35899CC",
+      "evidence": [
+        "Fragment B has no format header \u2014 consistent with interior/tail position",
+        "entropy delta boundary score: 0.0/100",
+        "no type detected on either fragment \u2014 structural test skipped",
+        "entropy tail=-0.000, head=6.000, delta=6.000",
+        "Fragment A has critical corruption flags: ['near_total_zero_fill', 'uniform_byte_pattern']"
+      ]
+    },
+    {
+      "from": "FRAG-314F47CF9B9E",
+      "to": "FRAG-5A067E4B85A6",
+      "evidence": [
+        "Fragment B starts with a format header \u2014 may be independent file, not continuation",
+        "entropy delta boundary score: 0.0/100",
+        "JPEG validation: SOI=\u2717, EOI=\u2717, Markers=\u2713, Entropy=\u2713",
+        "entropy tail=-0.000, head=5.130, delta=5.130",
+        "Physical offset contradiction: A at 298, B at 0 \u2014 B predates A in source",
+        "Fragment A has critical corruption flags: ['near_total_zero_fill', 'uniform_byte_pattern']"
+      ]
+    }
+  ],
+  "provenance": [
+    {
+      "output_range": [
+        0,
+        297
+      ],
+      "source_fragment": "FRAG-5A067E4B85A6",
+      "source_offset": 0,
+      "edge_from": null,
+      "edge_score": 1.0,
+      "edge_evidence": [
+        "Initial segment (head of reconstruction chain)"
+      ],
+      "validation_result": {
+        "format_valid": true,
+        "format_type": "JPEG",
+        "score": 100.0
+      }
+    },
+    {
+      "output_range": [
+        298,
+        595
+      ],
+      "source_fragment": "FRAG-B9F6DD7BC4F6",
+      "source_offset": 596,
+      "edge_from": "FRAG-5A067E4B85A6",
+      "edge_score": 0.7577,
+      "edge_evidence": [
+        "Fragment A is header_only \u2014 actively seeking continuation",
+        "Fragment B has no format header \u2014 consistent with interior/tail position",
+        "entropy delta boundary score: 67.6/100",
+        "partial assembly (4 internal markers found; full validation deferred)",
+        "entropy tail=6.000, head=6.000, delta=0.000"
+      ],
+      "validation_result": {
+        "format_valid": true,
+        "format_type": "JPEG",
+        "score": 100.0
+      }
+    },
+    {
+      "output_range": [
+        596,
+        890
+      ],
+      "source_fragment": "FRAG-6F51E35899CC",
+      "source_offset": 894,
+      "edge_from": "FRAG-B9F6DD7BC4F6",
+      "edge_score": 0.62,
+      "edge_evidence": [
+        "Fragment B has no format header \u2014 consistent with interior/tail position",
+        "entropy delta boundary score: 100.0/100",
+        "no type detected on either fragment \u2014 structural test skipped",
+        "entropy tail=6.000, head=6.000, delta=0.000"
+      ],
+      "validation_result": {
+        "format_valid": true,
+        "format_type": "JPEG",
+        "score": 100.0
+      }
+    },
+    {
+      "output_range": [
+        891,
+        1188
+      ],
+      "source_fragment": "FRAG-314F47CF9B9E",
+      "source_offset": 298,
+      "edge_from": "FRAG-6F51E35899CC",
+      "edge_score": 0.215,
+      "edge_evidence": [
+        "Fragment B has no format header \u2014 consistent with interior/tail position",
+        "entropy delta boundary score: 0.0/100",
+        "no type detected on either fragment \u2014 structural test skipped",
+        "entropy tail=5.938, head=-0.000, delta=5.938",
+        "Physical offset contradiction: A at 894, B at 298 \u2014 B predates A in source",
+        "Fragment B is near-total zero-fill \u2014 unlikely meaningful continuation"
+      ],
+      "validation_result": {
+        "format_valid": true,
+        "format_type": "JPEG",
+        "score": 100.0
+      }
+    }
+  ],
+  "created_at": "2026-09-26T00:00:00Z",
+  "forensic_notes": [
+    "Status could not be determined from available evidence"
+  ]
+}

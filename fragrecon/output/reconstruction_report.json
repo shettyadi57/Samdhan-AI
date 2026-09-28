@@ -1,0 +1,38 @@
+{
+  "module": "SAMDHAN AI \u2014 Module 01: Intelligent Fragment Reconstruction",
+  "hackathon_track": "01 \u2014 Cybersecurity / AI / Digital Forensics / Storage Integrity",
+  "disk_image_sha256": "45f8d58ed43bbcffa20ae0d888008e1472a029526342e76421796edd18013880",
+  "jpeg_original_sha256": "df6040b2ef3b5c6e133fcf4b1feb877820eaeae52ceabf2ba1a2b701ba98f071",
+  "jpeg_split_at_offset": 4096,
+  "total_recovered": 2,
+  "recovered_files": [
+    {
+      "index": 1,
+      "file_type": "PDF",
+      "category": "Document",
+      "offset_in_image": 8192,
+      "size_bytes": 328,
+      "is_fragmented": false,
+      "footer_confirmed": true,
+      "structural_check_passed": true,
+      "structural_check_reason": "PDF: %PDF header and %%EOF trailer present",
+      "reconstruction_confidence": 100.0,
+      "stitch_scores": [],
+      "sha256": "1d3b83a800401711bcc0fb7bf85905b6c76688ac8893c178503d799b37063a04"
+    },
+    {
+      "index": 2,
+      "file_type": "JPEG",
+      "category": "Photo",
+      "offset_in_image": 4096,
+      "size_bytes": 8394,
+      "is_fragmented": false,
+      "footer_confirmed": true,
+      "structural_check_passed": true,
+      "structural_check_reason": "JPEG: SOI+EOI present; Pillow decode passed",
+      "reconstruction_confidence": 100.0,
+      "stitch_scores": [],
+      "sha256": "050f09a7a1a2b7820b4c4ac323805e96ace7b5cda62ada12dfe62b3c5112cc88"
+    }
+  ]
+}

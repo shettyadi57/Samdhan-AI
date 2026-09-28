@@ -1,5 +1,5 @@
 import React from 'react';
-import { Shield, Lock, FileSearch, Database, Cpu, Terminal, Download, Layers, CheckCircle2 } from 'lucide-react';
+import { Shield, Lock, FileSearch, Database, Cpu, Terminal, Download, Layers, CheckCircle2, Sparkles } from 'lucide-react';
 
 export default function Header({ 
   currentScreen, 
@@ -8,6 +8,7 @@ export default function Header({
   onOpenAiRules, 
   onOpenAuditLog, 
   onExportReport,
+  onOpenJuryPlaybook,
   isAnalyzed
 }) {
   return (
@@ -84,6 +85,17 @@ export default function Header({
               <span>4. Decision Support</span>
               <span className="w-1.5 h-1.5 rounded-full bg-cyber-neon"></span>
             </button>
+            <button
+              onClick={() => setCurrentScreen('reconstruction')}
+              className={`px-3 py-1.5 rounded-md text-xs font-medium transition-all flex items-center space-x-1.5 ${
+                currentScreen === 'reconstruction'
+                  ? 'bg-cyber-500/25 text-cyber-neon border border-cyber-500/50 shadow-neon font-bold'
+                  : 'text-cyber-neon/80 hover:text-cyber-neon hover:bg-cyber-500/10 border border-cyber-500/20'
+              }`}
+            >
+              <Cpu className="w-3.5 h-3.5 text-cyber-neon inline" />
+              <span>Reconstruction Engine</span>
+            </button>
           </div>
 
           {/* Security & Forensic Actions */}
@@ -94,6 +106,16 @@ export default function Header({
               <span>READ-ONLY COPY</span>
               <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
             </div>
+
+            {/* Jury Demo Playbook button */}
+            <button
+              onClick={onOpenJuryPlaybook}
+              title="Open Jury Demonstration Playbook & Sample Vault"
+              className="px-2.5 py-1.5 text-xs font-mono rounded bg-cyber-500/15 hover:bg-cyber-500/25 text-cyber-neon border border-cyber-500/40 transition-colors flex items-center space-x-1.5 shadow-neon"
+            >
+              <Sparkles className="w-3.5 h-3.5 text-cyber-neon" />
+              <span className="hidden sm:inline font-semibold">Jury Playbook</span>
+            </button>
 
             {/* AI vs Rule button */}
             <button

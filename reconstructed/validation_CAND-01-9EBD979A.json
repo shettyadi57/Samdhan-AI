@@ -1,0 +1,69 @@
+{
+  "format_type": "JPEG",
+  "format_valid": true,
+  "score": 100.0,
+  "checks": [
+    {
+      "name": "soi_marker",
+      "passed": true,
+      "description": "JPEG Start of Image (SOI: 0xFFD8) at offset 0",
+      "offset": 0,
+      "details": null
+    },
+    {
+      "name": "segment_lengths",
+      "passed": true,
+      "description": "JPEG segment lengths fit within payload bounds",
+      "offset": -1,
+      "details": {
+        "dqt": true,
+        "sof": true,
+        "dht": true,
+        "sos": true
+      }
+    },
+    {
+      "name": "entropy_stream",
+      "passed": true,
+      "description": "JPEG entropy-coded stream validated (byte stuffing & markers)",
+      "offset": -1,
+      "details": null
+    },
+    {
+      "name": "eoi_marker",
+      "passed": true,
+      "description": "JPEG End of Image (EOI: 0xFFD9) marker verified",
+      "offset": 1187,
+      "details": null
+    }
+  ],
+  "issues": [],
+  "metadata": {
+    "markers_found": [
+      {
+        "marker": "0xFFE0",
+        "offset": 2
+      },
+      {
+        "marker": "0xFFDB",
+        "offset": 20
+      },
+      {
+        "marker": "0xFFC0",
+        "offset": 89
+      },
+      {
+        "marker": "0xFFC4",
+        "offset": 108
+      },
+      {
+        "marker": "0xFFDA",
+        "offset": 145
+      }
+    ],
+    "entropy_scan_bytes": 633,
+    "dimensions": "64x64",
+    "mode": "RGB"
+  },
+  "reason": "JPEG validation: SOI=\u2713, EOI=\u2713, Markers=\u2713, Entropy=\u2713"
+}

@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import { 
   UploadCloud, FolderUp, FileCode, Clock, Tag, User, HardDrive, 
-  Play, ShieldAlert, Sparkles, AlertCircle, FileCheck, Check 
+  Play, ShieldAlert, Sparkles, AlertCircle, FileCheck, Check,
+  Folder, BookOpen, ExternalLink, HelpCircle
 } from 'lucide-react';
 import { SAMPLE_CASES } from '../data/mockForensicData';
+import JuryDemoModal from './JuryDemoModal';
 
 export default function InputScreen({ 
   onStartPipeline, 
@@ -13,11 +15,13 @@ export default function InputScreen({
   const [selectedPreset, setSelectedPreset] = useState('operation_nightfall');
   const [activeTab, setActiveTab] = useState('upload'); // 'upload' or 'carved_folder'
   const [dragActive, setDragActive] = useState(false);
+  const [showJuryGuide, setShowJuryGuide] = useState(false);
   const [uploadedFile, setUploadedFile] = useState({
-    name: 'seagate_barracuda_incident_dump.raw',
-    size: '2.14 GB (4,194,304 sectors)',
+    name: 'seagate_barracuda_incident_dump.dd',
+    path: 'sample_data/01_INCIDENT_OPERATION_NIGHTFALL/seagate_barracuda_incident_dump.dd',
+    size: '2.00 MB (4,096 sectors)',
     hash: 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855',
-    type: 'Raw Disk Bitstream Image'
+    type: 'DD Raw Forensic Disk Clone'
   });
 
   const handleApplyPreset = (presetKey) => {
@@ -35,12 +39,23 @@ export default function InputScreen({
         rawImageHash: p.rawImageHash,
         totalFragments: p.totalFragments,
       });
-      setUploadedFile({
-        name: `${presetKey}_forensic_image.dd`,
-        size: '1.82 GB (3,554,304 sectors)',
-        hash: p.rawImageHash,
-        type: 'DD Raw Forensic Disk Clone'
-      });
+      if (presetKey === 'operation_nightfall') {
+        setUploadedFile({
+          name: 'seagate_barracuda_incident_dump.dd',
+          path: 'sample_data/01_INCIDENT_OPERATION_NIGHTFALL/seagate_barracuda_incident_dump.dd',
+          size: '2.00 MB (4,096 sectors)',
+          hash: p.rawImageHash,
+          type: 'DD Raw Forensic Disk Clone'
+        });
+      } else {
+        setUploadedFile({
+          name: 'sandisk_128gb_exfat_carved.raw',
+          path: 'sample_data/02_INCIDENT_PROJECT_AEGIS/sandisk_128gb_exfat_carved.raw',
+          size: '1.50 MB (3,072 sectors)',
+          hash: p.rawImageHash,
+          type: 'Raw Unallocated Flash Dump'
+        });
+      }
     }
   };
 
@@ -92,9 +107,18 @@ export default function InputScreen({
               Quick Case Presets (Single-Click Test Data)
             </h2>
           </div>
-          <span className="text-xs text-zinc-400 font-mono">
-            Load pre-configured incident context &amp; carved fragments
-          </span>
+          <div className="flex items-center space-x-3">
+            <button
+              onClick={() => setShowJuryGuide(true)}
+              className="px-3 py-1.5 bg-cyber-500/15 hover:bg-cyber-500/25 text-cyber-neon border border-cyber-500/40 rounded-lg text-xs font-mono font-semibold flex items-center space-x-1.5 transition-all shadow-neon"
+            >
+              <BookOpen className="w-3.5 h-3.5" />
+              <span>Jury Demo Playbook &amp; Sample Data</span>
+            </button>
+            <span className="text-xs text-zinc-400 font-mono hidden md:inline">
+              Vault: sample_data/
+            </span>
+          </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -122,7 +146,7 @@ export default function InputScreen({
               Seagate 2TB Ext4 disk dump. Contains encrypted databases, batch wiper scripts, ransom demands, and C2 traffic.
             </p>
             <div className="mt-3 flex items-center gap-3 text-[11px] font-mono text-zinc-500">
-              <span>36 Unallocated Fragments</span>
+              <span className="text-cyber-neon">sample_data/01_INCIDENT_OPERATION_NIGHTFALL</span>
               <span>•</span>
               <span className="text-red-400 font-semibold">Active Breach Window</span>
             </div>
@@ -152,10 +176,36 @@ export default function InputScreen({
               SanDisk 128GB USB exFAT unallocated space. Contains CAD drawings, credentials, wiped bash history, and curl exfil.
             </p>
             <div className="mt-3 flex items-center gap-3 text-[11px] font-mono text-zinc-500">
-              <span>24 Unallocated Fragments</span>
+              <span className="text-cyber-neon">sample_data/02_INCIDENT_PROJECT_AEGIS</span>
               <span>•</span>
               <span className="text-amber-400 font-semibold">Insider Threat Window</span>
             </div>
+          </div>
+        </div>
+
+        {/* Local Evidence Pack Quick Overview */}
+        <div className="mt-4 pt-3 border-t border-zinc-800/80 flex flex-wrap items-center justify-between gap-2 text-[11px] font-mono">
+          <div className="flex items-center space-x-2 text-zinc-400">
+            <Folder className="w-3.5 h-3.5 text-cyber-neon" />
+            <span>Local Evidence Vault:</span>
+            <span className="text-zinc-200 bg-dark-950 px-2 py-0.5 rounded border border-zinc-800">
+              sample_data/
+            </span>
+          </div>
+          <div className="flex items-center space-x-3 text-zinc-400">
+            <span className="flex items-center space-x-1">
+              <span className="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+              <span>4 Real Incident Cases</span>
+            </span>
+            <span>•</span>
+            <span>15 Benchmark Artifacts</span>
+            <span>•</span>
+            <button
+              onClick={() => setShowJuryGuide(true)}
+              className="text-cyber-neon hover:underline font-bold"
+            >
+              Open Jury Presentation Guide &rarr;
+            </button>
           </div>
         </div>
       </div>
@@ -238,10 +288,17 @@ export default function InputScreen({
             {uploadedFile && (
               <div className="mt-4 p-4 rounded-lg bg-dark-950 border border-zinc-800 space-y-2 font-mono text-xs">
                 <div className="flex items-center justify-between text-zinc-300">
-                  <span className="font-semibold text-white flex items-center space-x-1.5 truncate max-w-[280px]">
-                    <FileCheck className="w-4 h-4 text-cyber-neon shrink-0" />
-                    <span className="truncate">{uploadedFile.name}</span>
-                  </span>
+                  <div className="truncate max-w-[280px]">
+                    <span className="font-semibold text-white flex items-center space-x-1.5 truncate">
+                      <FileCheck className="w-4 h-4 text-cyber-neon shrink-0" />
+                      <span className="truncate">{uploadedFile.name}</span>
+                    </span>
+                    {uploadedFile.path && (
+                      <span className="text-[10px] text-zinc-400 font-mono block truncate mt-0.5">
+                        {uploadedFile.path}
+                      </span>
+                    )}
+                  </div>
                   <span className="text-zinc-500 text-[11px] shrink-0">{uploadedFile.size}</span>
                 </div>
 
@@ -383,6 +440,14 @@ export default function InputScreen({
           </div>
         </div>
       </div>
+
+      {/* Jury Presentation Playbook Modal */}
+      {showJuryGuide && (
+        <JuryDemoModal
+          onClose={() => setShowJuryGuide(false)}
+          onLoadPreset={handleApplyPreset}
+        />
+      )}
     </div>
   );
 }

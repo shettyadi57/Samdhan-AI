@@ -1,0 +1,21 @@
+================================================================================
+SAMDHAN AI -- DIGITAL FORENSIC INCIDENT BRIEFING REPORT
+================================================================================
+Case Identifier  : CASE-2026-ESPIONAGE
+Operation Name   : Project Aegis (Corporate Trade Secret Exfiltration)
+Lead Examiner    : Inv. Sarah Vance (CIRT Forensics Specialist)
+Target Media     : SanDisk Ultra 128GB USB Flash (exFAT Unallocated Space)
+Incident Window  : 2026-09-22 08:00:00 UTC to 2026-09-22 19:00:00 UTC
+Acquisition Tool : SAMDHAN AI Bitstream Imager (Physical Sector Clone)
+--------------------------------------------------------------------------------
+INCIDENT SYNOPSIS:
+Telemetry alarms flagged an unusual 1.8GB outbound POST transfer from a development
+workstation assigned to the Propulsion Lab. Forensic recovery of unallocated cluster
+space carved deleted shell histories, CAD blueprint PDFs, and an executive strategy memo
+confirming deliberate exfiltration of proprietary IP before an employee resignation.
+
+PRIMARY INDICATORS OF COMPROMISE (IOCs):
+  - Exfil Target   : https://ftp.dropzone-7.net/upload/ingest
+  - Tarball Staged : /tmp/aegis_schematics_v3.tar.gz.gpg
+  - Wiped Log      : ~/.bash_history shredded with 5 zero passes
+================================================================================

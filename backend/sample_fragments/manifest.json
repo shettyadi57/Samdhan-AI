@@ -1,0 +1,57 @@
+[
+  {
+    "file": "frag_alpha.bin",
+    "size": 670,
+    "sha256": "a90d0a91f257cd3f5512b15d84a38d35914aaa5b6da4f27e88d896d0f20ddc1d"
+  },
+  {
+    "file": "frag_beta.bin",
+    "size": 73,
+    "sha256": "3fd6e6be528c182d768563a63b65ac5a70d022149a01eeeaaa30396d75f426e0"
+  },
+  {
+    "file": "frag_gamma.bin",
+    "size": 287,
+    "sha256": "39746875380028da3dd0c90590eda67ef19bedba6a0164f309a4dc41a0d10b8a"
+  },
+  {
+    "file": "frag_delta.bin",
+    "size": 151,
+    "sha256": "dad29e7f2a5407f2e4cb666f06841be53efbe9e87bea82fab5a139a5e5fc4e1f"
+  },
+  {
+    "file": "frag_epsilon.bin",
+    "size": 670,
+    "sha256": "94bec06c6957b90b9400d0a3169e4bcdcfbc888b0198f1de87d5e0d3880e9fd3"
+  },
+  {
+    "file": "frag_zeta.bin",
+    "size": 668,
+    "sha256": "a35073f3354ae095b04a72bae69798cdffc81aeaecdc33402c36dc17492b8507"
+  },
+  {
+    "file": "frag_eta.bin",
+    "size": 1024,
+    "sha256": "b1017b230bd94bfc76befb176b2c23e95ca2347e1552d7f0f7bf86b0f99249d5"
+  },
+  {
+    "file": "frag_theta.bin",
+    "size": 512,
+    "sha256": "076a27c79e5ace2a3d47f9dd2e83e4ff6ea8872b3c2218f66c92b89b55f36560"
+  },
+  {
+    "file": "frag_iota.bin",
+    "size": 512,
+    "sha256": "5ef2ca3fa7fb0b16177df761e33bb0cfc8657c66dc6ec69199490c1fcb36a534"
+  },
+  {
+    "file": "frag_kappa.bin",
+    "size": 11,
+    "sha256": "23e5c96c789570b1a740a7463526bb846d97506642e12a6a5e6b9b3b7a90cd5f"
+  },
+  {
+    "file": "frag_lambda.bin",
+    "size": 200,
+    "sha256": "1901da1c9f699b48f6b2636e65cbf73abf99d0441ef67f5c540a42f7051dec6f"
+  }
+]
