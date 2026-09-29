@@ -10,6 +10,7 @@ import AuditLogModal from './components/AuditLogModal';
 import IntegrityDashboard from './components/IntegrityDashboard';
 import InvestigationCenter from './components/InvestigationCenter';
 import FragmentReconstructionWorkflow from './components/FragmentReconstructionWorkflow';
+import FeatureHub from './components/FeatureHub';
 import JuryDemoModal from './components/JuryDemoModal';
 import DEMO_ARTIFACTS, { computeDemoStats } from './data/demoArtifacts';
 import { SAMPLE_CASES, MOCK_ARTIFACTS, INITIAL_AUDIT_LOG } from './data/mockForensicData';
@@ -142,6 +143,13 @@ export default function App() {
             <HeroCyberBanner
               onStartDemo={handleStartPipeline}
               onOpenAiRules={() => setShowAiRules(true)}
+            />
+
+            {/* ✦ Four Dynamic Feature Hub — directly navigates to each live module */}
+            <FeatureHub
+              onNavigate={setCurrentScreen}
+              onStartPipeline={handleStartPipeline}
+              isAnalyzed={isAnalyzed}
             />
 
             {/* Input & Case Context Form */}
