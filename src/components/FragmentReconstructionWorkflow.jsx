@@ -176,7 +176,11 @@ export default function FragmentReconstructionWorkflow() {
       // Advance to step 6 (Graph View) after successful run
       setActiveStep(6);
     } catch (err) {
-      setError(err.message);
+      if (err.message === 'Failed to fetch' || err.message?.includes('Failed to reach')) {
+        setError("SAMDHAN AI Backend (port 8000) is unreachable. Run `python -m uvicorn backend.integrity_pipeline:app --host 127.0.0.1 --port 8000` or launch `run_local.bat`.");
+      } else {
+        setError(err.message);
+      }
     } finally {
       setLoading(false);
     }
