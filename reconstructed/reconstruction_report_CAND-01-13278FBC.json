@@ -330,7 +330,7 @@
       }
     }
   ],
-  "created_at": "2026-09-25T22:11:19.063521+00:00",
+  "created_at": "2026-09-29T17:12:56.247429+00:00",
   "forensic_notes": [
     "Complete reconstruction: all 4 fragments present; format valid (JPEG validation: SOI=\u2713, EOI=\u2713, Markers=\u2713, Entropy=\u2713)",
     "Structural check passed; all 4 fragments present; path score 66.6",
